@@ -1,20 +1,56 @@
-@font-face {
-	font-family: “Pudelinka”;
-	src: url(”Fonts/pudelinka.ttf” ) format('truetype’);
-	font-weight: normal;
-	font-style: normal;
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <style>
+                body {
+                  background-color: white; /* Ensure the iframe has a white background */
+                }
+
+                body {
+  background-color: #f0f8ff; /* Светло-голубой */
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
-body{
-blockquote.q {
-	color: #D4AF37;
-	border-left: 4px solid #8B0000;
-	font-style: italic;
-}
-	background-color: #d2b48c;
-	margin-left: 20%;
-	margin-right: 20%;
-	border: 2px dotted black;
-	padding: 10px 10px 10px 10px;
-	font-family: sans serif;
-    }
-p.quote { font-family: “Pudelinka”, cursive;}
+
+  html, body {
+    height: 100%;
+  }
+  body {
+    background-color: #e0f7fa;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+  }
+  
+
+              </style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Мой сайт</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Привет, мир!</h1>
+</body>
+</html>
+
+<link rel="stylesheet" href="style.css">
+
+
+
+              <script>
+                              
+              </script>
+                        </body>
+                        </html>
+                    
