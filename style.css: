@@ -1,56 +1,6 @@
-
-                        <!DOCTYPE html>
-                        <html lang="en">
-                        <head>
-                            <meta charset="UTF-8">
-                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <style>
-                body {
-                  background-color: white; /* Ensure the iframe has a white background */
-                }
-
-                body {
+body {
   background-color: #f0f8ff; /* Светло-голубой */
   margin: 0;
   padding: 20px;
   font-family: Arial, sans-serif;
 }
-
-  html, body {
-    height: 100%;
-  }
-  body {
-    background-color: #e0f7fa;
-  }
-  
-  body {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-    color: white;
-  }
-  
-
-              </style>
-                        </head>
-                        <body>
-                            <!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>Мой сайт</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Привет, мир!</h1>
-</body>
-</html>
-
-<link rel="stylesheet" href="style.css">
-
-
-
-              <script>
-                              
-              </script>
-                        </body>
-                        </html>
-                    
