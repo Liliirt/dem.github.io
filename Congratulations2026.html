@@ -3,11 +3,17 @@
 <head>
     <style>
     body {
-      background-color: #ADD8E6; 
+      background-color: #FFF5EE; 
       font-family: Pudelinka, sans-serif;
       padding: 40px;
     }
   </style>
+    <style>
+  body {
+    font-size: 40px;
+    line-height: 1.6; 
+  }
+</style>
     <link rel="stylesheet" href="style.css">
     <p><a href="krossvordRU.html">Русский кроссворд</a></p>
   <p><a href="krossvordEN.html">Английский кроссворд кроссворд</a></p>
@@ -21,5 +27,56 @@
     <p>В преддверии праздника многие семьи любят проводить время за уютными домашними развлечениями. Популярностью пользуются настольные игры, викторины и, конечно, кроссворды. Например, русский кроссворд с тематикой зимы и праздника помогает не только скоротать вечер, но и расширить словарный запас, вспомнить традиции и символы Нового года — от Деда Мороза до снеговика.</p>
     <p>Не менее интересен и английский кроссворд, особенно для школьников и тех, кто изучает язык. В нём могут встречаться слова вроде snowflake, fireworks, gift или champagne — так новогоднее настроение сочетается с полезной практикой. Такие задания делают подготовку к празднику ещё более увлекательной и образовательной для всей семьи.</p>
  <p class=”quote”>Разгадывайте, угадывайте, улыбайтесь — и пусть Новый год принесёт вам радость, вдохновение и успехи в учёбе и работе!</p>   
-</body>
+<!-- Падающий снег -->
+<div id="snowflakes"></div>
+
+<style>
+  #snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  .snowflake {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    filter: blur(0.5px);
+    animation: fall linear infinite;
+  }
+  @keyframes fall {
+    to {
+      transform: translateY(100vh);
+    }
+  }
+</style>
+
+<script>
+  const snowContainer = document.getElementById('snowflakes');
+  const snowflakesCount = 100; // количество снежинок
+
+  for (let i = 0; i < snowflakesCount; i++) {
+    const snowflake = document.createElement('div');
+    snowflake.classList.add('snowflake');
+
+    // Случайные параметры
+    const size = Math.random() * 6 + 2; // от 2 до 8px
+    const posX = Math.random() * 100;   // позиция по X (%)
+    const delay = Math.random() * 10;   // задержка анимации
+    const duration = Math.random() * 10 + 5; // длительность падения (5–15 сек)
+
+    snowflake.style.width = `${size}px`;
+    snowflake.style.height = `${size}px`;
+    snowflake.style.left = `${posX}%`;
+    snowflake.style.animationDelay = `${delay}s`;
+    snowflake.style.animationDuration = `${duration}s`;
+
+    snowContainer.appendChild(snowflake);
+  }
+</script>
+/body>
 </html>
