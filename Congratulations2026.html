@@ -78,5 +78,63 @@
     snowContainer.appendChild(snowflake);
   }
 </script>
+    <!-- Новогодняя гирлянда -->
+<div class="garland"></div>
+
+<style>
+  .garland {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;
+    pointer-events: none;
+  }
+
+  .garland::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%);
+  }
+
+  .garland .bulb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 8px 2px white;
+    animation: twinkle 1.5s infinite alternate;
+  }
+
+  /* Разные задержки для "мигания" */
+  .garland .bulb:nth-child(2n) { animation-delay: 0.2s; }
+  .garland .bulb:nth-child(3n) { animation-delay: 0.4s; }
+  .garland .bulb:nth-child(5n) { animation-delay: 0.6s; }
+  .garland .bulb:nth-child(7n) { animation-delay: 0.8s; }
+
+  @keyframes twinkle {
+    0% { opacity: 0.4; box-shadow: 0 0 4px 1px white; }
+    100% { opacity: 1; box-shadow: 0 0 12px 4px gold; background: gold; }
+  }
+</style>
+
+<script>
+  // Создаём 30 "лампочек"
+  const garland = document.querySelector('.garland');
+  for (let i = 0; i < 30; i++) {
+    const bulb = document.createElement('div');
+    bulb.classList.add('bulb');
+    garland.appendChild(bulb);
+  }
+</script>
 </body>
 </html>
